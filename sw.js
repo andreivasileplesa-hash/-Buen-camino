@@ -1,4 +1,4 @@
-const CACHE = 'buen-camino-v6';
+const CACHE = 'buen-camino-v7';
 const FILES = ['./', './index.html', './editor.html', './styles.css', './app.js', './config.js', './manifest.webmanifest', './manifest-editor.webmanifest', './icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)));

@@ -13,4 +13,4 @@ La clave del enlace de edición está guardada localmente en `.editor-key`, que 
 
 En este Mac, abre `Abrir editor Buen Camino.command` para entrar al editor privado. La portada normal es de solo lectura.
 
-Al tocar una etapa, se abre Google Maps con la ruta a pie entre las localidades de esa etapa. No hace falta configurar una clave de API.
+Al tocar una etapa, se muestra su reflexión. El botón ↗ de esa etapa abre Google Maps con su ruta a pie. No hace falta configurar una clave de API.
