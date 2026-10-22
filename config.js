@@ -1,5 +1,5 @@
-// Clave anon/public de Supabase: protegida por las políticas de supabase.sql.
+// Clave publishable de Supabase: las escrituras se validan mediante supabase.sql.
 window.CAMINO_CONFIG = {
-  supabaseUrl: 'https://ehfwljyxwgeshplysabn.supabase.co',
-  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoZndsanl4d2dlc2hwbHlzYWJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1MjYyMzEsImV4cCI6MjEwODEwMjIzMX0.-1h3sXMGADVGitSGNC32ZKElR7DATklZKMb7X5uO3m8'
+  supabaseUrl: 'https://hlynumxhktvfseggjyig.supabase.co',
+  anonKey: 'sb_publishable_O1U9Fh04ITG_HIDkvcdpWw_gyDGF8e0'
 };
