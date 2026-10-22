@@ -10,3 +10,7 @@ Aplicación web para el tramo Sarria–Santiago. El enlace normal es de solo lec
 4. Sube los cambios a la rama `main` de GitHub para que GitHub Pages publique la versión conectada.
 
 La clave del enlace de edición está guardada localmente en `.editor-key`, que está excluida de Git. No la compartas en el enlace público de solo lectura. El hash configurado en SQL no permite leer la clave.
+
+En este Mac, abre `Abrir editor Buen Camino.command` para entrar al editor privado. La portada normal es de solo lectura.
+
+Al tocar una etapa, se abre Google Maps con la ruta a pie entre las localidades de esa etapa. No hace falta configurar una clave de API.
