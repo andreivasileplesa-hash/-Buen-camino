@@ -1,6 +1,6 @@
 # Buen Camino
 
-Aplicación web para el tramo Sarria–Santiago. El enlace normal es de solo lectura; el enlace de edición lleva una clave privada en el fragmento `#editar=...`. Los cambios se guardan en Supabase y los ven todas las personas.
+Aplicación web para el tramo central del Camino Portugués desde Tui hasta Santiago. El enlace normal es de solo lectura; el enlace de edición lleva una clave privada en el fragmento `#editar=...`. Los cambios se guardan en Supabase y los ven todas las personas.
 
 ## Activar guardado compartido
 
