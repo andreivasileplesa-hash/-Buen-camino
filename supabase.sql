@@ -1,5 +1,5 @@
 -- Ejecuta este SQL en el SQL Editor de tu proyecto Supabase.
--- Sustituye HASH_SHA256_DE_TU_CLAVE_DE_EDICION por el SHA-256 hex de la clave
+-- Sustituye e6c1023c5a951f58c4ab59e490ba9aa16f6cc0ef048dee61cd3a5730c4f3cb80 por el SHA-256 hex de la clave
 -- privada que solo llevarás en el enlace de edición (después de #editar=).
 create extension if not exists pgcrypto with schema extensions;
 create schema if not exists private;
@@ -23,7 +23,7 @@ create table if not exists private.camino_editor_secret (
 );
 revoke all on private.camino_editor_secret from public, anon, authenticated;
 insert into private.camino_editor_secret (id, secret_hash)
-values (1, 'HASH_SHA256_DE_TU_CLAVE_DE_EDICION')
+values (1, 'e6c1023c5a951f58c4ab59e490ba9aa16f6cc0ef048dee61cd3a5730c4f3cb80')
 on conflict (id) do update set secret_hash = excluded.secret_hash;
 
 create or replace function public.guardar_camino(p_clave text, p_data jsonb)

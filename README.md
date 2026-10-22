@@ -1,17 +1,12 @@
 # Buen Camino
 
-Aplicación web pública para el tramo Sarria–Santiago. Incluye etapas, reflexiones y lecturas por fecha, con un modo de edición privado por enlace y un modo público de solo lectura.
+Aplicación web para el tramo Sarria–Santiago. El enlace normal es de solo lectura; el enlace de edición lleva una clave privada en el fragmento `#editar=...`. Los cambios se guardan en Supabase y los ven todas las personas.
 
-## Publicación en GitHub Pages
+## Activar guardado compartido
 
-El flujo de GitHub Actions de `.github/workflows/pages.yml` publica la carpeta raíz cuando hay cambios en `main`. En GitHub, abre **Settings → Pages** y selecciona **GitHub Actions**.
+1. Crea un proyecto en Supabase.
+2. En el SQL Editor del proyecto, ejecuta `supabase.sql`.
+3. En `config.js`, añade la Project URL y la clave anon/public del proyecto. No uses la clave `service_role`.
+4. Sube los cambios a la rama `main` de GitHub para que GitHub Pages publique la versión conectada.
 
-## Guardado compartido (Supabase)
-
-GitHub Pages publica archivos estáticos; para compartir cambios entre visitantes hace falta una base de datos.
-
-1. Crea un proyecto en Supabase y ejecuta `supabase.sql` en **SQL Editor**. Antes, establece `secret_hash` con el SHA-256 hexadecimal de una clave aleatoria que usarás solo en el enlace de edición. No publiques el enlace de edición.
-2. Copia la **Project URL** y la **anon/public key** de Supabase a `config.js`. La clave anon está pensada para usarse desde la web; las reglas de `supabase.sql` limitan la escritura a la función protegida.
-3. Sube los cambios a GitHub. La página pública es de solo lectura. El enlace de edición añade `#editar=CLAVE_ALEATORIA`; esa clave debe corresponder al hash guardado en Supabase.
-
-Los textos y reflexiones se guardan en Supabase y se muestran a todos los visitantes. No uses la `service_role` key en `config.js` ni la incluyas en la web.
+La clave del enlace de edición está guardada localmente en `.editor-key`, que está excluida de Git. No la compartas en el enlace público de solo lectura. El hash configurado en SQL no permite leer la clave.
